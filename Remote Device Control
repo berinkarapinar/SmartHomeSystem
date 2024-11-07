@@ -1,0 +1,21 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity RemoteDeviceControl is
+    Port (
+        RemoteSignal : in STD_LOGIC;
+        Device : out STD_LOGIC
+    );
+end RemoteDeviceControl;
+
+architecture Behavioral of RemoteDeviceControl is
+begin
+    process(RemoteSignal)
+    begin
+        if RemoteSignal = '1' then
+            Device <= '1'; -- Turn device ON
+        else
+            Device <= '0'; -- Turn device OFF
+        end if;
+    end process;
+end Behavioral;

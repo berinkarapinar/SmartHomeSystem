@@ -1,0 +1,21 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity DoorbellNotification is
+    Port (
+        DoorbellButton : in STD_LOGIC;
+        NotificationLED : out STD_LOGIC
+    );
+end DoorbellNotification;
+
+architecture Behavioral of DoorbellNotification is
+begin
+    process(DoorbellButton)
+    begin
+        if DoorbellButton = '1' then
+            NotificationLED <= '1'; -- LED ON when doorbell is pressed
+        else
+            NotificationLED <= '0'; -- LED OFF otherwise
+        end if;
+    end process;
+end Behavioral;

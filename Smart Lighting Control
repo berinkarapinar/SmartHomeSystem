@@ -1,0 +1,21 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity SmartLightingControl is
+    Port (
+        LightSwitch : in STD_LOGIC;
+        Light : out STD_LOGIC
+    );
+end SmartLightingControl;
+
+architecture Behavioral of SmartLightingControl is
+begin
+    process(LightSwitch)
+    begin
+        if LightSwitch = '1' then
+            Light <= '1'; -- Turn light ON
+        else
+            Light <= '0'; -- Turn light OFF
+        end if;
+    end process;
+end Behavioral;

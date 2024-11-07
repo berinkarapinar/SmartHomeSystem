@@ -1,0 +1,21 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity TemperatureFanControl is
+    Port (
+        TemperatureSensor : in STD_LOGIC;
+        Fan : out STD_LOGIC
+    );
+end TemperatureFanControl;
+
+architecture Behavioral of TemperatureFanControl is
+begin
+    process(TemperatureSensor)
+    begin
+        if TemperatureSensor = '1' then
+            Fan <= '1'; -- Turn fan ON if temperature is high
+        else
+            Fan <= '0'; -- Turn fan OFF if temperature is low
+        end if;
+    end process;
+end Behavioral;

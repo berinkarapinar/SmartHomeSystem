@@ -1,0 +1,21 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity DoorLockSecurity is
+    Port (
+        LockButton : in STD_LOGIC;
+        DoorLock : out STD_LOGIC
+    );
+end DoorLockSecurity;
+
+architecture Behavioral of DoorLockSecurity is
+begin
+    process(LockButton)
+    begin
+        if LockButton = '1' then
+            DoorLock <= '1'; -- Lock the door
+        else
+            DoorLock <= '0'; -- Unlock the door
+        end if;
+    end process;
+end Behavioral;

@@ -1,0 +1,21 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity SoilMoistureControl is
+    Port (
+        MoistureSensor : in STD_LOGIC;
+        IrrigationPump : out STD_LOGIC
+    );
+end SoilMoistureControl;
+
+architecture Behavioral of SoilMoistureControl is
+begin
+    process(MoistureSensor)
+    begin
+        if MoistureSensor = '0' then
+            IrrigationPump <= '1'; -- Pump ON when soil is dry
+        else
+            IrrigationPump <= '0'; -- Pump OFF when soil is wet
+        end if;
+    end process;
+end Behavioral;

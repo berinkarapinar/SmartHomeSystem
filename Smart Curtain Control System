@@ -1,0 +1,21 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity SmartCurtainControl is
+    Port (
+        LightSensor : in STD_LOGIC;
+        CurtainMotor : out STD_LOGIC
+    );
+end SmartCurtainControl;
+
+architecture Behavioral of SmartCurtainControl is
+begin
+    process(LightSensor)
+    begin
+        if LightSensor = '1' then
+            CurtainMotor <= '1'; -- Open curtains when it's bright
+        else
+            CurtainMotor <= '0'; -- Close curtains when it's dark
+        end if;
+    end process;
+end Behavioral;
