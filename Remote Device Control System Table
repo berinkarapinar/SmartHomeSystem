@@ -1,0 +1,7 @@
+## Remote Device Control
+
+| Current State | Action                  | Next State  |
+|---------------|-------------------------|-------------|
+| Idle          | Wait for Command        | Activate    |
+| Activate      | Control Device On/Off   | Report      |
+| Report        | Send Device Status      | Idle        |
