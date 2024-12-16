@@ -1,0 +1,7 @@
+## Doorbell Notification System
+
+| Current State | Action                   | Next State  |
+|---------------|--------------------------|-------------|
+| Idle          | Wait for Button Press    | Ring        |
+| Ring          | Activate Buzzer or LED   | Notify      |
+| Notify        | Send Notification        | Idle        |
