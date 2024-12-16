@@ -1,0 +1,7 @@
+## Soil Moisture and Irrigation Control System
+
+| Current State | Action                       | Next State  |
+|---------------|------------------------------|-------------|
+| Idle          | Check Soil Moisture          | Water/Stop  |
+| Water         | Activate Water Pump          | Stop        |
+| Stop          | Stop Pump (Sufficient Water) | Idle        |
