@@ -1,0 +1,7 @@
+## Smart Curtain Control System
+
+| Current State | Action                      | Next State  |
+|---------------|-----------------------------|-------------|
+| Idle          | Check Light Level           | Open/Close  |
+| Open          | Activate Motor to Open      | Idle        |
+| Close         | Activate Motor to Close     | Idle        |
