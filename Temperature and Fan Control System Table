@@ -1,0 +1,7 @@
+## Temperature and Fan Control
+
+| Current State | Action                     | Next State  |
+|---------------|----------------------------|-------------|
+| Idle          | Check Temperature          | Cool/Stop   |
+| Cool          | Activate Fan               | Stop        |
+| Stop          | Deactivate Fan             | Idle        |
