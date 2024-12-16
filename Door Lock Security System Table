@@ -1,0 +1,5 @@
+| Current State | Action                | Next State  |
+|---------------|-----------------------|-------------|
+| Idle          | Wait for Input        | Check       |
+| Check         | Verify Password/RFID  | Unlock/Idle |
+| Unlock        | Activate Lock Mechanism | Idle       |
