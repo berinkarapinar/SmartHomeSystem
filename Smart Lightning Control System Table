@@ -1,0 +1,7 @@
+## Smart Lighting Control
+
+| Current State | Action                       | Next State  |
+|---------------|------------------------------|-------------|
+| Idle          | Check Light/Motion Sensor    | On/Off      |
+| On            | Turn Light On                | Idle        |
+| Off           | Turn Light Off               | Idle        |
